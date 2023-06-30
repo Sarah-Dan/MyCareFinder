@@ -9,26 +9,26 @@ type Props = {
 const About = ({ setSelectedPage }: Props) => {
   return (
     <section id="about" className="gap-16 bg-cf-white py-20 md:h-full md:pb-0">
-      <div className="flex flex-row justify-center items-center mx-20">
-        <div className="w-full flex gap-4 mt-4"> 
+      <div className="mx-20 flex flex-row items-center justify-center">
+        <div className="mt-4 flex w-full gap-4">
           <img
-            className="w-1/3 h-1/3 object-contain"
+            className="h-1/3 w-1/3 object-contain"
             src={patient01}
             alt="welcome"
           />
           <img
-            className="mt-12 w-1/3 h-1/3 object-contain"
+            className="mt-12 h-1/3 w-1/3 object-contain"
             src={patient02}
             alt="welcome"
           />
         </div>
-        <div className="flex flex-col justify-between w-full m-4 p-6 items-center">
-          <div className="flex flex-col items-center mt-2.5 w-full">
-            <h2 className="text-2xl text-bold mb-2.5">Welcome to </h2>
-            <h1 className="text-5xl text-bold text-cf-blue">CareFinder</h1>
+        <div className="m-4 flex w-full flex-col items-center justify-between p-6">
+          <div className="mt-2.5 flex w-full flex-col items-center">
+            <h2 className="text-bold mb-2.5 text-2xl">Welcome to </h2>
+            <h1 className="text-bold text-5xl text-cf-blue">CareFinder</h1>
           </div>
           <div>
-            <p className="text-medium leading-1 p-6 text-center mb-2.5 w-full">
+            <p className="leading-1 mb-2.5 w-full p-6 text-center text-medium">
               CareFinder is a platform where users can search for hosiptals in
               their areas, export hospital details for your records and enhance
               your healthcare experience by connecting with others and sharing
@@ -36,9 +36,10 @@ const About = ({ setSelectedPage }: Props) => {
             </p>
           </div>
           <div>
-          <CTAButton setSelectedPage={setSelectedPage}>Our Services</CTAButton>
-            {/* <Button title="Our Services" /> */}
-        </div>
+            <CTAButton setSelectedPage={setSelectedPage}>
+              Our Services
+            </CTAButton>
+          </div>
         </div>
       </div>
     </section>

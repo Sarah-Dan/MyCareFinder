@@ -1,6 +1,6 @@
 import "./footer.css";
 import { footerLinks } from "../../constants";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   FaFacebook,
   FaInstagram,

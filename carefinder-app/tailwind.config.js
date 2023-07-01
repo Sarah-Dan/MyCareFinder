@@ -47,6 +47,13 @@ export default {
         "semibold": "700",
         "bold": "800",
       },
+      boxShadow: {
+        "cf-shadow": "0px 4px 20px rgba(0, 0, 0, 0.1)",
+      },
+      transition: {
+        "cf-transition": "all 0.3s ease-in-out",
+      },
+      transform: ["hover", "focus"],
     },
   },
   plugins: [],

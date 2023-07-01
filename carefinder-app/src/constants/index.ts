@@ -1,3 +1,27 @@
+// 
+export const services= [
+    {
+        img: "./assets/hospital.png",
+        title: "Find a Hospital",
+        description: "Effortlessly Find the Best Hospitals Near You",
+    }, 
+    {
+        img: "./assets/doctoricon.png",
+        title: "Find a Doctor",
+        description: "Find the Best Doctors Near You",
+    },
+    {
+        img: "./assets/saveline.png",
+        title: "Export Hospital Details",
+        description: "Export Hospital Details for Your Records",
+    },
+    {
+        img: "./assets/share.png",
+        title: "Share Hospitals",
+        description: "Share Hospitals with Others",
+    },
+];
+
 // footer links
 export const footerLinks = [
     {

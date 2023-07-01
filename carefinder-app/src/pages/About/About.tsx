@@ -36,7 +36,9 @@ const About = ({ setSelectedPage }: Props) => {
             </p>
           </div>
           <div>
-            <CTAButton setSelectedPage={setSelectedPage}>
+            <CTAButton setSelectedPage={setSelectedPage}
+            // onClick={() => setSelectedPage(SelectedPage.Services)}
+            >
               Our Services
             </CTAButton>
           </div>

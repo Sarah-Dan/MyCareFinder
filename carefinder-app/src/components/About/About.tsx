@@ -2,6 +2,7 @@ import { SelectedPage } from "@/shared/types";
 import CTAButton from "@/shared/CTAButton";
 import patient01 from "@/assets/patient01.png";
 import patient02 from "@/assets/patient02.png";
+
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
@@ -36,8 +37,9 @@ const About = ({ setSelectedPage }: Props) => {
             </p>
           </div>
           <div>
-            <CTAButton setSelectedPage={setSelectedPage}
-            // onClick={() => setSelectedPage(SelectedPage.Services)}
+            <CTAButton
+              setSelectedPage={setSelectedPage}
+              // onClick={() => setSelectedPage(SelectedPage.Services)}
             >
               Our Services
             </CTAButton>

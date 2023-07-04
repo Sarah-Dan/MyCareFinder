@@ -22,15 +22,15 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage}: Props) => {
   <nav>
     <div className={`${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full py-6`}>
       <div className={`${flexBetween} mx-auto w-5/6`}>
-        <div className={`${flexBetween} w-full gap-16`}>
+        <div className={`${flexBetween} w-full gap-12`}>
           <div className="flex-row flex items-center">
           <img src={logo} alt="logo" className="w-12 h-12" />
-          <h1 className="text-2xl font-bold ml-2">CareFinder</h1>
+          <h1 className="text-2xl font-bold mr-12">CareFinder</h1>
           </div>
           {/* nav links */}
           {isAboveMediumScreens ? (
           <div className={`${flexBetween} w-full`}>
-            <div className={`${flexBetween} gap-8 text-sm`}>
+            <div className={`${flexBetween} gap-8 text-base`}>
               <Link
                 page="Home" 
                 selectedPage={selectedPage}
@@ -38,7 +38,7 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage}: Props) => {
               />
               <Link page="About" selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage} /> 
-              <Link page="Contact us" selectedPage={selectedPage}
+              <Link page="Contact" selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage} /> 
               <Link page="Find Hospitals" selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage} />   
@@ -86,7 +86,7 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage}: Props) => {
             />
             <Link page="About" selectedPage={selectedPage}
               setSelectedPage={setSelectedPage} /> 
-            <Link page="Contact us" selectedPage={selectedPage}
+            <Link page="Contact" selectedPage={selectedPage}
               setSelectedPage={setSelectedPage} /> 
             <Link page="Find Hospitals" selectedPage={selectedPage}
               setSelectedPage={setSelectedPage} />

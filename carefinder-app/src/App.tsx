@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { SelectedPage } from "./shared/types";
-import NavBar from "./components/NavBar/NavBar";
-import  { Home, About}  from "./pages";
-import Services from "./components/Services/Services";
+import { Home } from "./pages";
+import { NavBar, About, Services, Testimonials, Contact, Footer } from "./components";
 
 function App() {
-  const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home);
+  const [selectedPage, setSelectedPage] = useState<SelectedPage>(
+    SelectedPage.Home
+  );
   const [isTopOfPage, setIsTopOfPage] = useState<boolean>(true);
 
   useEffect(() => {
@@ -20,15 +21,19 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
   return (
     <div className="app bg-cf-gray">
       <NavBar
-        isTopOfPage={isTopOfPage} 
-      selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+        isTopOfPage={isTopOfPage}
+        selectedPage={selectedPage}
+        setSelectedPage={setSelectedPage}
+      />
       <Home setSelectedPage={setSelectedPage} />
       <About setSelectedPage={setSelectedPage} />
       <Services setSelectedPage={setSelectedPage} />
+      <Testimonials />
+      <Contact setSelectedPage={setSelectedPage} />
+      <Footer />
     </div>
   );
 }

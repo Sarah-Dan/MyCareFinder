@@ -22,7 +22,7 @@ const Services = ({ setSelectedPage }: Props) => {
             hospitals and doctors near you.
           </p>
         </div>
-        <div className="my-4 gap-4 grid grid-cols-4 w-full">
+        <div className="my-4 gap-4 grid grid-rows-4 md:grid-cols-4">
           {/* services boxes */}
           <div className="transition-cf-transition hover:cf-transform mt-5 rounded-md border-2 bg-cf-white px-5 py-16 text-center shadow-cf-shadow">
             <div className="mb-4 flex justify-center">

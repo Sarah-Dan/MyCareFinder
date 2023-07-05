@@ -11,13 +11,13 @@ const Testimonials = () => {
         <div className="flex flex-col items-center">
           <div className="flex flex-row gap-2">
             <img src={line} />
-            <h1 className="text-bold text-3xl text-cf-blue">Testimonials</h1>
+            <h1 className="text-bold text-4xl text-cf-blue">Testimonials</h1>
           </div>
           <p className="text-semibold mt-4 text-2xl text-cf-dark-gray">
             What Our Users Say
           </p>
         </div>
-        <div className="my-6 grid w-full grid-cols-3 justify-center gap-8 md:grid sm:grid-rows-3">
+        <div className="my-6 grid w-full grid-rows-3 md:grid-cols-3 justify-center gap-8">
           <div className="flex flex-col items-start gap-4 rounded-xl bg-cf-white px-6 py-8 text-justify shadow-cf-shadow">
             <h3 className="text-semibold mb-2 text-base">
               Finding the right hospital has never been easier! With this

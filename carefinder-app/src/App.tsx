@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 import { SelectedPage } from "./shared/types";
-import { Home } from "./pages";
-import { NavBar, About, Services, Testimonials, Contact, Footer } from "./components";
+import { Home, SignIn, SignUp } from "@/pages";
+import { NavBar } from "./components";
+import { Routes, Route } from "react-router-dom";
+import { AuthContextProvider } from './contexts/AuthContext';
+import Profile from "./pages/Profile/Profile";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -28,12 +31,17 @@ function App() {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
-      <Home setSelectedPage={setSelectedPage} />
-      <About setSelectedPage={setSelectedPage} />
-      <Services setSelectedPage={setSelectedPage} />
-      <Testimonials />
-      <Contact setSelectedPage={setSelectedPage} />
-      <Footer />
+      
+      
+      {/* routes */}
+      <AuthContextProvider>
+      <Routes>
+        <Route path="/" element={<Home setSelectedPage={setSelectedPage} />} />
+        <Route path="/SignIn" element={<SignIn />} />
+        <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
+      </AuthContextProvider>
     </div>
   );
 }

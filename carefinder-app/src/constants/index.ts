@@ -53,3 +53,38 @@ export const footerLinks: Array<FooterType> = [
     ],
   },
 ];
+
+// sidebar links
+export const sidebarLinks = [
+  {
+    icon: "home",
+    title: "Home",
+    url: "/",
+  },
+  {
+    icon: "hospital",
+    title: "Find Hospitals",
+    url: "/find-hospitals",
+  },
+  {
+    icon: " user",
+    title: "Edit Profile",
+    url: "/edit-profile",
+  },
+  {
+    icon: "user",
+    title: "Saved Hospitals",
+    url: "/saved-hospitals",
+  },
+  {
+    icon: "hospital",
+    title: "Add Hospital",
+    url: "/add-hospital",
+  },
+  {
+    icon: "user",
+    title: "Settings",
+    url: "/settings",
+  }
+];
+

@@ -7,20 +7,35 @@ import {
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
 
-const UserContext = createContext();
+// const UserContext = createContext();
 
-// eslint-disable-next-line react/prop-types
+interface AuthContextData {
+  isAuthenticated: boolean;
+  createUser: (email: string, password: string) => Promise<void>;
+  login: (email: string, password: string) => Promise<void>;
+  signUp: (email: string, password: string) => Promise<void>;
+  signIn: (email: string, password: string) => Promise<void>;
+  signOut: () => void;
+}
+
+export const UserContext = createContext<AuthContextData>({
+  isAuthenticated: false,
+  signUp: () => Promise.resolve(),
+  signIn: () => Promise.resolve(),
+  signOut: () => {},
+});
+
 export const AuthContextProvider = ({ children }) => {
   // states
   const [user, setUser] = useState({});
 
     // create user
-  const createUser = (email, password) => {
+  const createUser = (email:string, password:string) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
     // sign in user
-    const signin = (email, password) => {
+    const login = (email:string, password:string) => {
         return signInWithEmailAndPassword(auth, email, password);
     };
 
@@ -41,7 +56,7 @@ export const AuthContextProvider = ({ children }) => {
   }, []);
 
   return (
-    <UserContext.Provider value={{ createUser, user, signout, signin }}>
+    <UserContext.Provider value={{ createUser, user, signout, login }}>
       {children}
     </UserContext.Provider>
   );

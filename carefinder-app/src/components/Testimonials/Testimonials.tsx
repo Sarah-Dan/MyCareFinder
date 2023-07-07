@@ -18,7 +18,7 @@ const Testimonials = () => {
           </p>
         </div>
         <div className="my-6 grid w-full grid-rows-3 md:grid-cols-3 justify-center gap-8">
-          <div className="flex flex-col items-start gap-4 rounded-xl bg-cf-white px-6 py-8 text-justify shadow-cf-shadow">
+          <div className="w-full flex flex-col items-start gap-4 rounded-xl bg-cf-white px-6 py-8 text-justify shadow-cf-shadow">
             <h3 className="text-semibold mb-2 text-base">
               Finding the right hospital has never been easier! With this
               website, I was able to locate a nearby hospital quickly and

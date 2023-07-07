@@ -2,6 +2,7 @@ import { SelectedPage } from "@/shared/types";
 import CTAButton from "@/shared/CTAButton";
 import patient01 from "@/assets/patient01.png";
 import patient02 from "@/assets/patient02.png";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
@@ -43,6 +44,13 @@ const About = ({ setSelectedPage }: Props) => {
             >
               Our Services
             </CTAButton>
+            <AnchorLink
+              className="text-sm font-bold text-cf-black underline hover:text-cf-blue mt-8"
+              onClick={() => setSelectedPage(SelectedPage.Profile)}
+              href={`#${SelectedPage.Profile}`}
+            >
+              <p>Profile</p>
+            </AnchorLink>
           </div>
         </div>
       </div>

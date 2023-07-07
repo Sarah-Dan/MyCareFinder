@@ -1,19 +1,29 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { getAuth, signInWithRedirect, GoogleAuthProvider } from "firebase/auth";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyC8-hK4bTYdsWeI0_cJxi9jCFZ308n26T8",
-  authDomain: "carefinder-app-dc0a2.firebaseapp.com",
-  projectId: "carefinder-app-dc0a2",
-  storageBucket: "carefinder-app-dc0a2.appspot.com",
-  messagingSenderId: "534962854797",
-  appId: "1:534962854797:web:6e31d5fbbf71452d58fbc4"
+  apiKey: "AIzaSyAiJLQPbYiezQAyy2WasUXDJCcfGKMq6UY",
+  authDomain: "mycarefinder.firebaseapp.com",
+  projectId: "mycarefinder",
+  storageBucket: "mycarefinder.appspot.com",
+  messagingSenderId: "143700674088",
+  appId: "1:143700674088:web:7b35309f6a386440ecd71d"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
 
-export default app;
+export {
+  app,
+  provider,
+  auth,
+  signInWithRedirect,
+   
+}

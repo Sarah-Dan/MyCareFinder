@@ -11,8 +11,8 @@ const CTAButton = ({ children, setSelectedPage }: Props) => {
   return (
     <AnchorLink
       className="rounded-md bg-cf-blue px-10 py-2 hover:bg-cf-light-blue hover:text-blue-900 text-cf-white"
-      onClick={() => setSelectedPage(SelectedPage.ContactUs)}
-      href={`#${SelectedPage.ContactUs}`}
+      onClick={() => setSelectedPage(SelectedPage.Contact)}
+      href={`#${SelectedPage.Contact}`}
     >
       {children}
     </AnchorLink>

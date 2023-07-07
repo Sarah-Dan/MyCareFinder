@@ -1,5 +1,6 @@
 import { useState } from "react";
-import Link from "./Link";
+import { Link } from "react-router-dom";
+import Links from "./Links";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import logo from "@/assets/cflogo.png";
 import { SelectedPage } from "../../shared/types";
@@ -31,21 +32,22 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage}: Props) => {
           {isAboveMediumScreens ? (
           <div className={`${flexBetween} w-full`}>
             <div className={`${flexBetween} gap-8 text-base`}>
-              <Link
+              <Links
                 page="Home" 
                 selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage} 
               />
-              <Link page="About" selectedPage={selectedPage}
+              <Links page="About" selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage} /> 
-              <Link page="Contact" selectedPage={selectedPage}
+              <Links page="Contact" selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage} /> 
-              <Link page="Find Hospitals" selectedPage={selectedPage}
+              <Links page="Find Hospitals" selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage} />   
             </div>
             <div className={`${flexBetween} gap-8`}>
-            <Link page="Log in" selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage} />
+            <Link to="./SignIn">
+              Log in
+            </Link>
               <CTAButton setSelectedPage={setSelectedPage}>
                     Sign up
               </CTAButton>
@@ -79,21 +81,22 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage}: Props) => {
           </div>
           {/* nav links */}
           <div className="flex flex-col ml-[33%] gap-10 text-xl font-bold text-cf-white">
-            <Link
+            <Links
               page="Home" 
               selectedPage={selectedPage}
               setSelectedPage={setSelectedPage} 
             />
-            <Link page="About" selectedPage={selectedPage}
+            <Links page="About" selectedPage={selectedPage}
               setSelectedPage={setSelectedPage} /> 
-            <Link page="Contact" selectedPage={selectedPage}
+            <Links page="Contact" selectedPage={selectedPage}
               setSelectedPage={setSelectedPage} /> 
-            <Link page="Find Hospitals" selectedPage={selectedPage}
+            <Links page="Find Hospitals" selectedPage={selectedPage}
               setSelectedPage={setSelectedPage} />
               </div>
               <div className="flex flex-col items-center gap-6 mt-6 text-xl font-bold text-cf-white">
-              <Link page="About" selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage} />
+              <Link to="./SignIn">
+              Log in
+            </Link>
               <CTAButton setSelectedPage={setSelectedPage}>
                     Sign up
               </CTAButton>

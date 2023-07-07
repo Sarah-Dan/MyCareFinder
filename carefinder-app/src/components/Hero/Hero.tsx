@@ -1,5 +1,3 @@
-// import SearchHospital from "../SearchHospital/SearchHospital";
-// import Button from "../Button/Button";
 import CTAButton from "@/shared/CTAButton";
 import { SelectedPage } from "@/shared/types";
 import AnchorLink from "react-anchor-link-smooth-scroll";
@@ -50,8 +48,8 @@ const Hero = ({ setSelectedPage }: Props) => {
             <CTAButton setSelectedPage={setSelectedPage}>Get Started</CTAButton>
             <AnchorLink
               className="text-sm font-bold text-cf-black underline hover:text-cf-blue"
-              onClick={() => setSelectedPage(SelectedPage.ContactUs)}
-              href={`#${SelectedPage.ContactUs}`}
+              onClick={() => setSelectedPage(SelectedPage.Contact)}
+              href={`#${SelectedPage.Contact}`}
             >
               <p>Learn More</p>
             </AnchorLink>

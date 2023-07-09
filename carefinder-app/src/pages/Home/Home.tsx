@@ -19,7 +19,7 @@ type Props = {
 // create a home component
 const Home = ({ setSelectedPage }: Props) => {
   return (
-    <section id="home" className="gap-16 py-20 md:h-full md:pb-0">
+    <section id="home" className="bg-cf-white gap-16 py-20 md:h-full md:pb-0">
       {/* hero section */}
       <div className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6">
         {/* hero content */}

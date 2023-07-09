@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { SelectedPage } from "./shared/types";
-import { Home, SignIn, SignUp } from "@/pages";
+import { Home, SignIn, SignUp, FindHospitals } from "@/pages";
 import { NavBar } from "./components";
 import { Routes, Route } from "react-router-dom";
-import { AuthContextProvider } from './contexts/AuthContext';
+import { AuthContextProvider } from "./contexts/AuthContext";
 import Profile from "./pages/Profile/Profile";
+import HospitalDetails from "./components/Hospitals/HospitalDetails";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -31,16 +32,20 @@ function App() {
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
-      
-      
       {/* routes */}
       <AuthContextProvider>
-      <Routes>
-        <Route path="/" element={<Home setSelectedPage={setSelectedPage} />} />
-        <Route path="/SignIn" element={<SignIn />} />
-        <Route path="/SignUp" element={<SignUp />} />
-        <Route path="/profile" element={<Profile />} />
-      </Routes>
+        <Routes>
+          <Route
+            path="/"
+            element={<Home setSelectedPage={setSelectedPage} />}
+          />
+          <Route path="/SignIn" element={<SignIn />} />
+          <Route path="/SignUp" element={<SignUp />} />
+          <Route path="/profile" element={<Profile />} />
+
+          <Route path="/find-hospitals" element={<FindHospitals />} />
+          <Route path="/hospital-details/:id" element={<HospitalDetails />} />
+        </Routes>
       </AuthContextProvider>
     </div>
   );

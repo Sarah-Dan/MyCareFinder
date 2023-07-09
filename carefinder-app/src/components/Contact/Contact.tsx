@@ -30,9 +30,7 @@ const Contact = ({ setSelectedPage }: Props) => {
       id="contact"
       className="gap-16 bg-cf-white py-20 md:h-full md:pb-0"
     >
-      <motion.div
-        onViewportEnter={() => setSelectedPage(SelectedPage.Contact)}
-      >
+      <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.Contact)}>
         {/* first */}
         <motion.div
           className="text-center md:w-3/5"
@@ -45,10 +43,10 @@ const Contact = ({ setSelectedPage }: Props) => {
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <h1 className="text-3xl font-bold uppercase text-cf-blue">
+          <h1 className="text-5xl font-bold text-cf-blue">
             Get in touch
           </h1>
-          <p>
+          <p className="text-medium text-center px-8">
             Learn more about how the platform works. Speak with a
             representative. Learn more about how the platform works. Speak with
             a representative.
@@ -73,6 +71,7 @@ const Contact = ({ setSelectedPage }: Props) => {
               onSubmit={handleSubmit}
               action="https://formsubmit.co/c7921677d268cbdfc4c27b113817b742"
               method="POST"
+              className="mx-auto w-4/5 md:w-full"
             >
               <input
                 className={inputStyles}

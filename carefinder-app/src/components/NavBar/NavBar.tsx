@@ -39,8 +39,11 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage}: Props) => {
               />
               <Links page="About" selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage} /> 
+                <Links page="Services" selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage} />
               <Links page="Contact" selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage} /> 
+                
               <Links page="Find Hospitals" selectedPage={selectedPage}
                 setSelectedPage={setSelectedPage} />   
             </div>
@@ -48,7 +51,9 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage}: Props) => {
             <Link to="./SignIn">
               Log in
             </Link>
-              <CTAButton setSelectedPage={setSelectedPage}>
+              <CTAButton setSelectedPage={setSelectedPage}
+              onClick={() => setSelectedPage(SelectedPage.SignUp)}
+              >
                     Sign up
               </CTAButton>
             </div>
@@ -81,25 +86,24 @@ const NavBar = ({ isTopOfPage, selectedPage, setSelectedPage}: Props) => {
           </div>
           {/* nav links */}
           <div className="flex flex-col ml-[33%] gap-10 text-xl font-bold text-cf-white">
-            <Links
-              page="Home" 
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage} 
-            />
+          <Links page="Home" selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage} />
             <Links page="About" selectedPage={selectedPage}
               setSelectedPage={setSelectedPage} /> 
             <Links page="Contact" selectedPage={selectedPage}
               setSelectedPage={setSelectedPage} /> 
-            <Links page="Find Hospitals" selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage} />
+            
+            <Link to="./find-hospitals">
+              Find Hospitals
+            </Link>
               </div>
               <div className="flex flex-col items-center gap-6 mt-6 text-xl font-bold text-cf-white">
               <Link to="./SignIn">
               Log in
             </Link>
-              <CTAButton setSelectedPage={setSelectedPage}>
-                    Sign up
-              </CTAButton>
+            <Link to="./SignUp">
+              Sign up
+            </Link>
               </div>
       </div>
     )}

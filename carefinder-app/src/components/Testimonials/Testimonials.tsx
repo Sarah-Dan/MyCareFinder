@@ -6,19 +6,21 @@ import emily from "../../assets/emily.png";
 
 const Testimonials = () => {
   return (
-    <section className="gap-16 bg-cf-white py-20 md:h-full md:pb-0">
-      <div className="mx-20 flex flex-col items-center justify-center p-8">
+    <section className="gap-16 bg-cf-white md:h-full md:pb-0">
+      <div className="flex flex-col items-center justify-center p-8">
         <div className="flex flex-col items-center">
           <div className="flex flex-row gap-2">
             <img src={line} />
-            <h1 className="text-bold text-4xl text-cf-blue">Testimonials</h1>
+            <h1 className="text-4xl font-semibold text-cf-blue">
+              Testimonials
+            </h1>
           </div>
-          <p className="text-semibold mt-4 text-2xl text-cf-dark-gray">
+          <p className="mt-4 text-2xl font-bold text-cf-dark-gray">
             What Our Users Say
           </p>
         </div>
-        <div className="my-6 grid w-full grid-rows-3 md:grid-cols-3 justify-center gap-8">
-          <div className="w-full flex flex-col items-start gap-4 rounded-xl bg-cf-white px-6 py-8 text-justify shadow-cf-shadow">
+        <div className="my-12 grid w-full grid-rows-3 justify-center gap-8 md:grid-cols-3">
+          <div className="flex w-full flex-col items-start gap-4 rounded-xl bg-cf-white px-6 py-8 text-justify shadow-cf-shadow">
             <h3 className="text-semibold mb-2 text-base">
               Finding the right hospital has never been easier! With this
               website, I was able to locate a nearby hospital quickly and
@@ -50,7 +52,7 @@ const Testimonials = () => {
             <h3 className="text-semibold mb-2 text-base">
               I recently moved to a new city and had no idea where to go for
               medical assistance, my friend shared some hospital details using
-              the carefinder website with me and it was a lifesaver! I was able
+              the CareFinder website with me and it was a lifesaver! I was able
               to find a hospital near me in no time. I highly recommend this
               website!
             </h3>

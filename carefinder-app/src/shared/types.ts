@@ -2,10 +2,9 @@ export enum SelectedPage {
   Home = "home",
   About = "about",
   Contact = "contact",
-  // Signin = "signin",
   Services = "services",
-  
   Profile = "profile",
+  Login = "login",
 }
 
 export interface UserAuthType {
@@ -19,7 +18,18 @@ export interface UserAuthType {
   address?: string;
 }
 
-// Hospital.ts
+// Hospital section
+export interface SearchResult {
+  id: number;
+  username: string;
+  name: string;
+  email: string;
+  // address: string;
+  // phone: string;
+  website: string;
+  city: string;
+}
+
 export interface Hospital {
   id: number;
   name: string;
@@ -32,7 +42,6 @@ export interface HospitalType {
   address: string;
   rating: number;
 }
-
 
 export interface FooterType {
   heading: string;

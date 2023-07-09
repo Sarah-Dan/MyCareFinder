@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Hospital } from '@/shared/types';
-import HospitalList from './HospitalList';
+// import { Hospital } from '@/shared/types';
+
 
 const FindHospitals: React.FC = () => {
-  const [hospitals, setHospitals] = useState<Hospital[]>([]);
+  // const [hospitals, setHospitals] = useState<Hospital[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -15,10 +15,10 @@ const FindHospitals: React.FC = () => {
         if (!response.ok) {
           throw new Error('Failed to fetch hospitals');
         }
-        const data = await response.json();
-        setHospitals(data);
+        // const data = await response.json();
+        // setHospitals(data);
       } catch (error) {
-        setError(error.message);
+        // setError(error.message);
       } finally {
         setIsLoading(false);
       }
@@ -38,7 +38,6 @@ const FindHospitals: React.FC = () => {
   return (
     <div>
       <h1>Find Hospitals</h1>
-      <HospitalList hospitals={hospitals} />
     </div>
   );
 };

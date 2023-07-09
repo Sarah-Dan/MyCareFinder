@@ -6,6 +6,8 @@ export default {
       colors: {
         "cf-blue": "#1E3A8A",
         "cf-light-blue": "#E5E9F7",
+        "cf-dark-blue": "#1B3087",
+        "cf-blues": "#1e3b8a",
         "cf-gray": "#F2F2F2",
         "cf-light-gray": "#F7F7F7",
         "cf-dark-gray": "#5A5A5A",

@@ -28,13 +28,17 @@ const Profile = () => {
             <nav className="mt-8">
               <ul>
                 <li className="p-4 hover:bg-white hover:font-bold hover:text-cf-blue">
+                  <a href="/">
                   Home
+                  </a>
                 </li>
                 <li className="p-4 hover:bg-white hover:text-cf-blue">
                   Edit Profile
                 </li>
                 <li className="p-4 hover:bg-white hover:text-cf-blue">
+                  <a href="/find-hospitals">
                   Find Hospitals
+                  </a>
                 </li>
                 <li className="p-4 hover:bg-white hover:text-cf-blue">
                   Saved Hospitals

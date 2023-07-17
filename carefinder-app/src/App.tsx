@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { SelectedPage } from "./shared/types";
-import { Home, SignIn, SignUp, FindHospitals } from "@/pages";
+import { Home, SignIn, SignUp, FindHospitals, AddHospital } from "@/pages";
 import { NavBar } from "./components";
 import { Routes, Route } from "react-router-dom";
 import { AuthContextProvider } from "./contexts/AuthContext";
@@ -45,6 +45,7 @@ function App() {
 
           <Route path="/find-hospitals" element={<FindHospitals />} />
           <Route path="/hospital-details/:id" element={<HospitalDetails />} />
+          <Route path="/add-hospital" element={<AddHospital />} />
         </Routes>
       </AuthContextProvider>
     </div>

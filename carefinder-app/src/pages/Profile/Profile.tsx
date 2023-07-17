@@ -1,3 +1,5 @@
+import { BiHome, BiLogOut, BiSearch, BiSave, BiEdit, BiBookAdd } from "react-icons/bi";
+import { FiSettings } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import { UserAuth } from "../../contexts/AuthContext";
 // create a Profile component for users
@@ -28,29 +30,36 @@ const Profile = () => {
             <nav className="mt-8">
               <ul>
                 <li className="p-4 hover:bg-white hover:font-bold hover:text-cf-blue">
+                  <BiHome className="inline-block mr-2" />
                   <a href="/">
                   Home
                   </a>
                 </li>
                 <li className="p-4 hover:bg-white hover:text-cf-blue">
+                  <BiEdit className="inline-block mr-2" />
                   Edit Profile
                 </li>
                 <li className="p-4 hover:bg-white hover:text-cf-blue">
+                  <BiSearch className="inline-block mr-2" />
                   <a href="/find-hospitals">
                   Find Hospitals
                   </a>
                 </li>
                 <li className="p-4 hover:bg-white hover:text-cf-blue">
+                  <BiSave className="inline-block mr-2" />
+                  <a href="/saved-hospitals">
                   Saved Hospitals
+                  </a>
                 </li>
                 <li className="p-4 hover:bg-white hover:text-cf-blue">
+                  <BiBookAdd className="inline-block mr-2" />
+                  <a href="/add-hospital">
                   Add a Hospital
+                  </a>
                 </li>
-                <li className="p-4 hover:bg-cf-light-blue hover:text-cf-blue">
-                  Help
-                </li>
-                {/* <li className="p-4 hover:bg-white hover:text-cf-blue">About</li> */}
+                
                 <li className="p-4 hover:bg-white hover:text-cf-blue">
+                  <FiSettings className="inline-block mr-2" />
                   Settings
                 </li>
               </ul>
@@ -58,7 +67,7 @@ const Profile = () => {
             <button
               className="mt-8 w-full rounded-lg bg-cf-white p-4 text-cf-blue hover:bg-cf-gray hover:font-bold hover:text-cf-blue"
               onClick={handleSignOut}
-            >
+            ><BiLogOut className="inline-block mr-2 text-lg" />
               Sign Out
             </button>
           </div>
